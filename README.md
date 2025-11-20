@@ -1,8 +1,8 @@
-#PDF Decrypt Action
+# PDF Decrypt Action
 
 A macOS shell script that automatically decrypts password-protected PDFs and removes PDF restrictions using multiple passwords. Designed to work seamlessly with Finder Quick Actions and iCloud Drive.
 
-##Features
+## Features
 
 - Password-protected PDF decryption - Decrypt PDFs using stored passwords
 - Remove PDF restrictions - Remove copy, print, and edit restrictions
@@ -13,12 +13,12 @@ A macOS shell script that automatically decrypts password-protected PDFs and rem
 - Detailed logging - Comprehensive logs in ~/Library/Logs/
 - Finder integration - Works as a Quick Action in Finder
 
-##Requirements
+## Requirements
 
 - macOS 10.14 or later
 - qpdf - Install via Homebrew
 
-##Quick Start
+## Quick Start
 
 1. Install qpdf:
    `brew install qpdf`
@@ -32,12 +32,12 @@ A macOS shell script that automatically decrypts password-protected PDFs and rem
 
 4. Use with Finder: Right-click any PDF → Services → "PDF Decrypt Action"
 
-##Installation
+## Installation
 
-###Automatic Installation:
+### Automatic Installation:
 `curl -fsSL https://raw.githubusercontent.com/bukshanekom/pdf-decrypt-action/main/install.sh | bash`
 
-###Manual Installation
+### Manual Installation
 1. Clone the repository:
    `git clone https://github.com/bukshanekom/pdf-decrypt-action.git`
    `cd pdf-decrypt-action`
@@ -45,32 +45,37 @@ A macOS shell script that automatically decrypts password-protected PDFs and rem
 2. Run the install script:
    `./install.sh`
 
-###Usage
+## Usage
 
-Password File Setup
+### Storing your decrypt passwords
+Warning:
+
+This script stores passwords in plain text in ~/.decrypt-pdf-action. 
+Ensure this file has appropriate permissions and consider the security implications for your use case.
+
 Create a password file with one password per line:
 `echo "password1" > ~/.decrypt-pdf-action`
 `echo "password2" >> ~/.decrypt-pdf-action`
 `echo "password3" >> ~/.decrypt-pdf-action`
 
-###Using with Finder
+### Using with Finder
 1. Right-click on one or more PDF files
 2. Select "Services" → "PDF Decrypt Action"
 3. The script will process the files and show progress notifications
 
-###Command Line Usage
+### Command Line Usage
 `./decrypt-pdf-action.sh /path/to/encrypted.pdf`
 `./decrypt-pdf-action.sh /path/to/multiple/*.pdf`
 
-###Documentation
+## Documentation
 - Installation Guide: docs/INSTALLATION.md
 - Usage Guide: docs/USAGE.md
 - Troubleshooting: docs/TROUBLESHOOTING.md
 
-###Uninstallation
+## Uninstallation
 `curl -fsSL https://raw.githubusercontent.com/bukshanekom/pdf-decrypt-action/main/uninstall.sh | bash`
 
-##Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch
@@ -78,15 +83,11 @@ Create a password file with one password per line:
 4. Test thoroughly
 5. Submit a pull request
 
-##License
+## License
 
 MIT License - see LICENSE file for details.
 
-##Security Notice:
-
-This script stores passwords in plain text in ~/.decrypt-pdf-action. Ensure this file has appropriate permissions and consider the security implications for your use case.
-
-##Support:
+## Support:
 If you got this far, you are smart enough to figure it out yourself... if not, phone a friend
 
 - Issues: GitHub Issues
