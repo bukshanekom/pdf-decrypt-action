@@ -20,42 +20,41 @@ A macOS shell script that automatically decrypts password-protected PDFs and rem
 
 ## Quick Start
 
-1. Install qpdf:
+1. Install qpdf:  
    `brew install qpdf`
 
-2. Download and install the script:
+2. Download and install the script:  
    `curl -fsSL https://raw.githubusercontent.com/bukshanekom/pdf-decrypt-action/main/install.sh | bash`
 
-3. Set up your passwords:
-   echo "your_password_1" > ~/.decrypt-pdf-action
-   echo "your_password_2" >> ~/.decrypt-pdf-action
+3. Set up your passwords:  
+   `echo "your_password_1" > ~/.decrypt-pdf-action`
+   `echo "your_password_2" >> ~/.decrypt-pdf-action`
 
-4. Use with Finder: Right-click any PDF → Services → "PDF Decrypt Action"
+4. Use with Finder:
+   Right-click any PDF → Services → "PDF Decrypt Action"
 
 ## Installation
 
-### Automatic Installation:
+### Automatic Installation:  
 `curl -fsSL https://raw.githubusercontent.com/bukshanekom/pdf-decrypt-action/main/install.sh | bash`
 
 ### Manual Installation
-1. Clone the repository:
-   `git clone https://github.com/bukshanekom/pdf-decrypt-action.git`
+1. Clone the repository:  
+   `git clone https://github.com/bukshanekom/pdf-decrypt-action.git`  
    `cd pdf-decrypt-action`
 
-2. Run the install script:
+2. Run the install script:  
    `./install.sh`
 
 ## Usage
 
 ### Storing your decrypt passwords
-Warning:
+⚠️ This script stores passwords in plain text in ~/.decrypt-pdf-action.  
+⚠️ Ensure this file has appropriate permissions and consider the security implications for your use case.
 
-This script stores passwords in plain text in ~/.decrypt-pdf-action. 
-Ensure this file has appropriate permissions and consider the security implications for your use case.
-
-Create a password file with one password per line:
-`echo "password1" > ~/.decrypt-pdf-action`
-`echo "password2" >> ~/.decrypt-pdf-action`
+Create a password file with one password per line:  
+`echo "password1" > ~/.decrypt-pdf-action`  
+`echo "password2" >> ~/.decrypt-pdf-action`  
 `echo "password3" >> ~/.decrypt-pdf-action`
 
 ### Using with Finder
@@ -64,8 +63,8 @@ Create a password file with one password per line:
 3. The script will process the files and show progress notifications
 
 ### Command Line Usage
-`./decrypt-pdf-action.sh /path/to/encrypted.pdf`
-`./decrypt-pdf-action.sh /path/to/multiple/*.pdf`
+`./decrypt-pdf-action.sh /path/to/encrypted.pdf`  
+`./decrypt-pdf-action.sh /path/to/multiple/*.pdf`  
 
 ## Documentation
 - Installation Guide: docs/INSTALLATION.md
