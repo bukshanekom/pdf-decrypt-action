@@ -27,8 +27,9 @@ A macOS shell script that automatically decrypts password-protected PDFs and rem
    `curl -fsSL https://raw.githubusercontent.com/bukshanekom/pdf-decrypt-action/main/install.sh | bash`
 
 3. Set up your passwords:  
-   `echo "your_password_1" > ~/.decrypt-pdf-action`
-   `echo "your_password_2" >> ~/.decrypt-pdf-action`
+   `echo "your_password_1" > ~/.decrypt-pdf-action`  
+   `echo "password2" >> ~/.decrypt-pdf-action`  
+   `echo "password3" >> ~/.decrypt-pdf-action`
 
 4. Use with Finder:
    Right-click any PDF → Services → "PDF Decrypt Action"
